@@ -11,6 +11,7 @@ pod 'RealmSwift'
 pod 'Alamofire', '~> 4.7.3'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'SnapKit', '~> 4.0.0'
+pod 'SkyFloatingLabelTextField'
 
   target 'CurrencyConverterTestTests' do
     inherit! :search_paths

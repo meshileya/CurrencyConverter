@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A5DCBB22FA0A2A0055D4CE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCBA22FA0A2A0055D4CE /* CustomTextField.swift */; };
+		04A5DCBE22FA0A810055D4CE /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCBD22FA0A810055D4CE /* DashboardController.swift */; };
+		04A5DCC122FA0B520055D4CE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCC022FA0B520055D4CE /* UIColor.swift */; };
 		04DC52AF22F9FF070083CE4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC52AE22F9FF070083CE4B /* AppDelegate.swift */; };
 		04DC52B122F9FF070083CE4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC52B022F9FF070083CE4B /* ViewController.swift */; };
 		04DC52B422F9FF070083CE4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DC52B222F9FF070083CE4B /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A5DCBA22FA0A2A0055D4CE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		04A5DCBD22FA0A810055D4CE /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		04A5DCC022FA0B520055D4CE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		04DC52AB22F9FF070083CE4B /* CurrencyConverterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DC52AE22F9FF070083CE4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04DC52B022F9FF070083CE4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A5DCB822FA09600055D4CE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DCBF22FA0B420055D4CE /* Extension */,
+				04A5DCB922FA0A110055D4CE /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		04A5DCB922FA0A110055D4CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DCBA22FA0A2A0055D4CE /* CustomTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04A5DCBC22FA0A6E0055D4CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DCBD22FA0A810055D4CE /* DashboardController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04A5DCBF22FA0B420055D4CE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DCC022FA0B520055D4CE /* UIColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		04DC52A222F9FF070083CE4B = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +128,8 @@
 		04DC52AD22F9FF070083CE4B /* CurrencyConverterTest */ = {
 			isa = PBXGroup;
 			children = (
+				04A5DCBC22FA0A6E0055D4CE /* View */,
+				04A5DCB822FA09600055D4CE /* Common */,
 				04DC52AE22F9FF070083CE4B /* AppDelegate.swift */,
 				04DC52B022F9FF070083CE4B /* ViewController.swift */,
 				04DC52B222F9FF070083CE4B /* Main.storyboard */,
@@ -116,7 +157,6 @@
 				92943287C0D81337B2FEE5C4 /* Pods-CurrencyConverterTestTests.debug.xcconfig */,
 				708AA63752F51FD83EEA9EC9 /* Pods-CurrencyConverterTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -297,8 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A5DCBE22FA0A810055D4CE /* DashboardController.swift in Sources */,
 				04DC52B122F9FF070083CE4B /* ViewController.swift in Sources */,
 				04DC52AF22F9FF070083CE4B /* AppDelegate.swift in Sources */,
+				04A5DCBB22FA0A2A0055D4CE /* CustomTextField.swift in Sources */,
+				04A5DCC122FA0B520055D4CE /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
