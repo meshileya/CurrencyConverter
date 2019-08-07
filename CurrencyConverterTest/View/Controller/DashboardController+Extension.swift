@@ -8,8 +8,14 @@
 
 import Foundation
 import UIKit
-
+//import Charts
 extension DashboardController{
+    
+    func getChartData(with dataPoints: [String], values: [Double]) {
+        self.dateData = dataPoints
+        self.currencyRate = values
+    }
+    
     //Select the currency you want to convert from
     @objc func onFromTapped(){
         isSelectedFrom(status: true)
@@ -97,8 +103,20 @@ extension DashboardController{
             if result{
                 self.items = data
                 self.collectionView.reloadData()
+                self.populateChartData()
             }
             
+        }
+    }
+    
+    func populateChartData(){
+        if items.count > 0 {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            for item in items {
+                currencyRate.append(item.countryRate)
+                dateData.append("DAte")
+            }
         }
     }
 }

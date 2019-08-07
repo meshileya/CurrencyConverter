@@ -9,12 +9,15 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 class ApiService{
     
     typealias CompletionHandler = (_ result: Bool, _ data: [RatesModel], _ error: Error?) -> Void
     
     var countryRates : [RatesModel] = []
+    let realm = try! Realm()
+    lazy var historyData: Results<Rates> = { self.realm.objects(Rates.self) }()
     
     func currencyListCall(handler: @escaping CompletionHandler){
         //making a get request
@@ -26,13 +29,20 @@ class ApiService{
                     let json = JSON(value)
                     let rates: Dictionary<String, JSON> = json["rates"].dictionaryValue
                     print("Data items count: \(rates.count)")
-                    for item in rates { // loop through data items "  ".flag(country: model) + model + "    ▼"
-                        self.countryRates.append(RatesModel(countryCode: item.key, countryRate: item.value.double ?? 0.0))
+                    try! self.realm.write(){
+                        for item in rates { // loop through data items "  ".flag(country: model) + model + "    ▼"
+                            self.countryRates.append(RatesModel(countryCode: item.key, countryRate: item.value.double ?? 0.0))
+                            let rate = Rates()
+                            rate.countryCode = item.key
+                            rate.currencyValue = item.value.double ?? 0.0
+                            self.realm.add(rate)
+                        }
+                        self.historyData = self.realm.objects(Rates.self)
                     }
+                    
                     handler(true,self.countryRates, nil)
                 case .failure(let error):
-                    print(error)
-                    handler(false,self.countryRates, nil)
+                    handler(false,self.countryRates, error)
                 }
         }
     }

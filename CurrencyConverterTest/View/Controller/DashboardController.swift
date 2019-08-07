@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
-class DashboardController : UIViewController, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout, SelectedFromDelegate, UITextFieldDelegate{
+class DashboardController : UIViewController, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout, GetChartData, SelectedFromDelegate, UITextFieldDelegate{
     
     var fromIsSelected = false
     var selectedCountry : RatesModel?
     var delegate : SelectedFromDelegate?
+    
+    var dateData = [String]()
+    
+    var currencyRate = [Double]()
     
     var items: [RatesModel] = []
     //Load this particular view into the memory
@@ -22,6 +26,10 @@ class DashboardController : UIViewController, UIScrollViewDelegate, UICollection
         //Set background color to white
         view.backgroundColor = .white
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         initViews()
         initData()
     }
@@ -33,6 +41,7 @@ class DashboardController : UIViewController, UIScrollViewDelegate, UICollection
         view.addSubview(iconView)
         view.addSubview(scrollView)
         view.addSubview(collectionView)
+        
         
         collectionView.isHidden = true
         
@@ -121,6 +130,14 @@ class DashboardController : UIViewController, UIScrollViewDelegate, UICollection
         stackView.addArrangedSubview(currencyTypeStackView)
         stackView.addArrangedSubview(convertButton)
         stackView.addArrangedSubview(exchangeRateUpdateLabel)
+        
+        let lineChart = LineChart(frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 300))
+        stackView.addArrangedSubview(lineChart)
+        lineChart.layer.cornerRadius = 10
+        lineChart.delegate = self
+        
+        lineChart.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        lineChart.heightAnchor.constraint(equalToConstant: 300).isActive = true
         
         currencyInfoLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         currencyInfoLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
