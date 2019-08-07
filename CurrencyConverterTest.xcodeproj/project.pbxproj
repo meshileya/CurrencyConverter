@@ -10,6 +10,15 @@
 		04A5DCBB22FA0A2A0055D4CE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCBA22FA0A2A0055D4CE /* CustomTextField.swift */; };
 		04A5DCBE22FA0A810055D4CE /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCBD22FA0A810055D4CE /* DashboardController.swift */; };
 		04A5DCC122FA0B520055D4CE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCC022FA0B520055D4CE /* UIColor.swift */; };
+		04A5DCC322FA13DD0055D4CE /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCC222FA13DD0055D4CE /* UIButton.swift */; };
+		04A5DCC522FA1FC50055D4CE /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCC422FA1FC50055D4CE /* NSMutableAttributedString.swift */; };
+		04A5DCCA22FA33A20055D4CE /* CountryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCC922FA33A20055D4CE /* CountryListCell.swift */; };
+		04A5DCCC22FA34BF0055D4CE /* DashboardController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCCB22FA34BF0055D4CE /* DashboardController+Extension.swift */; };
+		04A5DCCE22FA35400055D4CE /* DynamicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCCD22FA35400055D4CE /* DynamicCollectionView.swift */; };
+		04A5DCD122FA39190055D4CE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCD022FA39190055D4CE /* ApiService.swift */; };
+		04A5DCD322FA3C340055D4CE /* RatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCD222FA3C340055D4CE /* RatesModel.swift */; };
+		04A5DCD622FA451F0055D4CE /* SelectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCD522FA451F0055D4CE /* SelectionProtocol.swift */; };
+		04A5DCD822FA48DF0055D4CE /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCD722FA48DF0055D4CE /* CustomLabel.swift */; };
 		04DC52AF22F9FF070083CE4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC52AE22F9FF070083CE4B /* AppDelegate.swift */; };
 		04DC52B122F9FF070083CE4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC52B022F9FF070083CE4B /* ViewController.swift */; };
 		04DC52B422F9FF070083CE4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DC52B222F9FF070083CE4B /* Main.storyboard */; };
@@ -34,6 +43,15 @@
 		04A5DCBA22FA0A2A0055D4CE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		04A5DCBD22FA0A810055D4CE /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		04A5DCC022FA0B520055D4CE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		04A5DCC222FA13DD0055D4CE /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		04A5DCC422FA1FC50055D4CE /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		04A5DCC922FA33A20055D4CE /* CountryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListCell.swift; sourceTree = "<group>"; };
+		04A5DCCB22FA34BF0055D4CE /* DashboardController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardController+Extension.swift"; sourceTree = "<group>"; };
+		04A5DCCD22FA35400055D4CE /* DynamicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicCollectionView.swift; sourceTree = "<group>"; };
+		04A5DCD022FA39190055D4CE /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		04A5DCD222FA3C340055D4CE /* RatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesModel.swift; sourceTree = "<group>"; };
+		04A5DCD522FA451F0055D4CE /* SelectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionProtocol.swift; sourceTree = "<group>"; };
+		04A5DCD722FA48DF0055D4CE /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		04DC52AB22F9FF070083CE4B /* CurrencyConverterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DC52AE22F9FF070083CE4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04DC52B022F9FF070083CE4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				04A5DCBA22FA0A2A0055D4CE /* CustomTextField.swift */,
+				04A5DCCD22FA35400055D4CE /* DynamicCollectionView.swift */,
+				04A5DCD722FA48DF0055D4CE /* CustomLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,7 +112,8 @@
 		04A5DCBC22FA0A6E0055D4CE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04A5DCBD22FA0A810055D4CE /* DashboardController.swift */,
+				04A5DCC822FA337D0055D4CE /* Cell */,
+				04A5DCC722FA33750055D4CE /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -101,8 +122,51 @@
 			isa = PBXGroup;
 			children = (
 				04A5DCC022FA0B520055D4CE /* UIColor.swift */,
+				04A5DCC222FA13DD0055D4CE /* UIButton.swift */,
+				04A5DCC422FA1FC50055D4CE /* NSMutableAttributedString.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		04A5DCC622FA335F0055D4CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DCD222FA3C340055D4CE /* RatesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04A5DCC722FA33750055D4CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DCBD22FA0A810055D4CE /* DashboardController.swift */,
+				04A5DCCB22FA34BF0055D4CE /* DashboardController+Extension.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A5DCC822FA337D0055D4CE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DCC922FA33A20055D4CE /* CountryListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04A5DCCF22FA38FB0055D4CE /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DCD022FA39190055D4CE /* ApiService.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		04A5DCD422FA45010055D4CE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04A5DCD522FA451F0055D4CE /* SelectionProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		04DC52A222F9FF070083CE4B = {
@@ -128,6 +192,9 @@
 		04DC52AD22F9FF070083CE4B /* CurrencyConverterTest */ = {
 			isa = PBXGroup;
 			children = (
+				04A5DCD422FA45010055D4CE /* Protocol */,
+				04A5DCCF22FA38FB0055D4CE /* DataManager */,
+				04A5DCC622FA335F0055D4CE /* Model */,
 				04A5DCBC22FA0A6E0055D4CE /* View */,
 				04A5DCB822FA09600055D4CE /* Common */,
 				04DC52AE22F9FF070083CE4B /* AppDelegate.swift */,
@@ -337,11 +404,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A5DCCC22FA34BF0055D4CE /* DashboardController+Extension.swift in Sources */,
+				04A5DCCA22FA33A20055D4CE /* CountryListCell.swift in Sources */,
+				04A5DCCE22FA35400055D4CE /* DynamicCollectionView.swift in Sources */,
+				04A5DCD822FA48DF0055D4CE /* CustomLabel.swift in Sources */,
+				04A5DCD322FA3C340055D4CE /* RatesModel.swift in Sources */,
 				04A5DCBE22FA0A810055D4CE /* DashboardController.swift in Sources */,
+				04A5DCD622FA451F0055D4CE /* SelectionProtocol.swift in Sources */,
 				04DC52B122F9FF070083CE4B /* ViewController.swift in Sources */,
 				04DC52AF22F9FF070083CE4B /* AppDelegate.swift in Sources */,
+				04A5DCD122FA39190055D4CE /* ApiService.swift in Sources */,
 				04A5DCBB22FA0A2A0055D4CE /* CustomTextField.swift in Sources */,
+				04A5DCC522FA1FC50055D4CE /* NSMutableAttributedString.swift in Sources */,
 				04A5DCC122FA0B520055D4CE /* UIColor.swift in Sources */,
+				04A5DCC322FA13DD0055D4CE /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

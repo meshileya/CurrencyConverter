@@ -27,6 +27,13 @@ class CustomTextField: SkyFloatingLabelTextField {
         return CGRect(x: leftPadding, y: titleHeight(), width: bounds.size.width, height: titleHeight())
     }
     
+//    override var isEnabled: Bool {
+//        willSet {
+////            textColor = newValue ? UIColor.white : UIColor.black
+//            backgroundColor = newValue ? UIColor.lightGray : UIColor.primaryColor
+//        }
+//    }
+    
     
 }
 
@@ -40,11 +47,11 @@ extension SkyFloatingLabelTextField {
         field.lineView.isHidden = true
         field.selectedTitleColor = UIColor.lightGray
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.backgroundColor = .textBackgroundColor()
+        field.backgroundColor = .textBackgroundColor
         field.heightAnchor.constraint(equalToConstant: 38).isActive = true
         field.layer.borderWidth = 1
         field.layer.cornerRadius = 5
-        field.layer.borderColor = UIColor.textBorderColor().cgColor
+        field.layer.borderColor = UIColor.textBorderColor.cgColor
         field.font = UIFont.systemFont(ofSize: 15)
 
         return field
