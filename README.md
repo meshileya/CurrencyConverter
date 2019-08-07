@@ -7,11 +7,11 @@ NOTE: This is just a test version of the application, values may not be same wit
 
 Tools used.
 
-Xcode 10.3 ==> The IDE used for the project.
-Swift 4.2 ==> Swift is the language used for this project.
-Alamofire ==> This is a simple Swift-based HTTP networking library for iOS.
-SwiftyJSON ==> A tool that helps to analyze JSON with ease.
-Realm ==> This is a cross-platform mobile database solution.
+1. Xcode 10.3 ==> The IDE used for the project.
+2. Swift 4.2 ==> Swift is the language used for this project.
+3. Alamofire ==> This is a simple Swift-based HTTP networking library for iOS.
+4. SwiftyJSON ==> A tool that helps to analyze JSON with ease.
+5. Realm ==> This is a cross-platform mobile database solution.
 
 How to install.
 
@@ -20,3 +20,5 @@ How to install.
 3. After you must have successfully installed your Xcode, double click on CurrencyConverterTest.xcworkspace
 4. Select the Simulator you will like to test on
 5. Amaze your experience with what you will see next.
+
+<img src="https://github.com/meshileya/CurrencyConverter/blob/dev/sample.gif"/>
