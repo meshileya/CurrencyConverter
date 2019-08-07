@@ -125,6 +125,7 @@ extension DashboardController{
             }
         }
         if items.count > 2{
+            selectedCountry = items[1]
             fromCountryCurrencyLabel.text = "  ".flag(country: items[0].countryCode) + items[0].countryCode+"    ▼"
             toCountryCurrencyLabel.text = "  ".flag(country: items[1].countryCode) + items[1].countryCode+"    ▼"
         }
