@@ -68,8 +68,18 @@ extension DashboardController{
             print(updatedText)
             secondCurrencyField.text = String((Double(updatedText ) ?? 0.0) * (selectedCountry?.countryRate ?? 0.0))
             
-            return updatedText.count <= 10
+            return updatedText.count <= 30
             
+        }
+        if textField == secondCurrencyField{
+            let currentText = textField.text ?? ""
+            guard let stringRange = Range(range, in: currentText) else { return false }
+            
+            let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+            print(updatedText)
+            firstCurrencyField.text = String((Double(updatedText ) ?? 0.0) / (selectedCountry?.countryRate ?? 0.0))
+            
+            return updatedText.count <= 30
         }
         return true
         

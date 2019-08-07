@@ -199,9 +199,8 @@ class DashboardController : UIViewController, UIScrollViewDelegate, UICollection
     
     lazy var secondCurrencyField : CustomTextField = {
         let field = CustomTextField.create(title: "", placeholder: "")
-        field.keyboardType = .asciiCapable
-//        field.isEnabled = false
-//        field.textColor = .black
+        field.keyboardType = .decimalPad
+        field.delegate = self
         return field
     }()
     
