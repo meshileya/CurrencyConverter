@@ -17,4 +17,5 @@ struct RatesModel {
 class Rates: Object {
     @objc dynamic var countryCode = ""
     @objc dynamic var currencyValue = 0.0
+    @objc dynamic var dateObject = Date()
 }

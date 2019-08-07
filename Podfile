@@ -13,6 +13,7 @@ pod 'SwiftyJSON', '~> 4.0'
 pod 'SnapKit', '~> 4.0.0'
 pod 'SkyFloatingLabelTextField'
 pod 'Charts'
+pod "TTGSnackbar"
 
   target 'CurrencyConverterTestTests' do
     inherit! :search_paths

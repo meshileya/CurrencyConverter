@@ -13,7 +13,6 @@ import Charts
 class ChartFormatter: NSObject, IAxisValueFormatter{
     var workoutDuration = [String]()
     func stringForValue(_ value: Double, axis: AxisBase?) -> String{
-        print("THE VALUE ==> \(value) ==> \(workoutDuration.count)")
         if (workoutDuration.count == 1 ){
             return workoutDuration[0]
         }else{

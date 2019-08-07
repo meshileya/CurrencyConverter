@@ -23,6 +23,7 @@ class LineChart: UIView{
             populateData()
             lineChartSetup()
         }
+        
     }
     
     func populateData(){
@@ -40,6 +41,7 @@ class LineChart: UIView{
         lineChartView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         
         lineChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .easeInSine)
+        
         setLineChart(dataPoints: dateData, values: currencyRate)
         
     }
@@ -65,17 +67,17 @@ class LineChart: UIView{
             print("Hello, \(values[i])!")
             lineDataEntry.append(dataPoint)
         }
-        let chartDataSet = LineChartDataSet(entries: lineDataEntry, label: "BPM")
+        let chartDataSet = LineChartDataSet(entries: lineDataEntry, label: "Get rates alert straight into your inbox")
         let chartData = LineChartData()
         chartData.addDataSet(chartDataSet)
         chartData.setDrawValues(true)
-        chartDataSet.colors = [UIColor.red]
-        chartDataSet.setCircleColor(UIColor.black)
+        chartDataSet.colors = [UIColor.lightGray]
+        chartDataSet.setCircleColor(UIColor.white)
         //            chartDataSet.circleHoleColor(UIColor.black)
         chartDataSet.circleRadius = 4.0
         chartDataSet.mode = .cubicBezier
         chartDataSet.cubicIntensity = 0.2
-        chartDataSet.drawCirclesEnabled = false
+        chartDataSet.drawCirclesEnabled = true
         
         
         chartDataSet.valueFont = UIFont(name: "Helvetica", size: 12.0)!
@@ -83,7 +85,6 @@ class LineChart: UIView{
         let gradientColors = [UIColor.black.cgColor, UIColor.clear.cgColor] as CFArray
         let colorLocations: [CGFloat] = [1.0, 0.0]
         guard let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) else {
-            print("Print what")
             return
         }
         chartDataSet.fill = Fill.fillWithLinearGradient(gradient, angle: 90.0)

@@ -22,6 +22,7 @@
 		04A5DCDA22FA68060055D4CE /* CustomChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCD922FA68050055D4CE /* CustomChart.swift */; };
 		04A5DCDC22FA69B10055D4CE /* GetChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCDB22FA69B10055D4CE /* GetChartData.swift */; };
 		04A5DCDE22FA6AE40055D4CE /* CustomChartFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCDD22FA6AE40055D4CE /* CustomChartFormatter.swift */; };
+		04A5DCE022FABB600055D4CE /* LocalDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5DCDF22FABB600055D4CE /* LocalDb.swift */; };
 		04DC52AF22F9FF070083CE4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC52AE22F9FF070083CE4B /* AppDelegate.swift */; };
 		04DC52B122F9FF070083CE4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC52B022F9FF070083CE4B /* ViewController.swift */; };
 		04DC52B422F9FF070083CE4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DC52B222F9FF070083CE4B /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		04A5DCD922FA68050055D4CE /* CustomChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChart.swift; sourceTree = "<group>"; };
 		04A5DCDB22FA69B10055D4CE /* GetChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChartData.swift; sourceTree = "<group>"; };
 		04A5DCDD22FA6AE40055D4CE /* CustomChartFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChartFormatter.swift; sourceTree = "<group>"; };
+		04A5DCDF22FABB600055D4CE /* LocalDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDb.swift; sourceTree = "<group>"; };
 		04DC52AB22F9FF070083CE4B /* CurrencyConverterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DC52AE22F9FF070083CE4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04DC52B022F9FF070083CE4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				04A5DCD022FA39190055D4CE /* ApiService.swift */,
+				04A5DCDF22FABB600055D4CE /* LocalDb.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				04DC52B122F9FF070083CE4B /* ViewController.swift in Sources */,
 				04A5DCDC22FA69B10055D4CE /* GetChartData.swift in Sources */,
 				04DC52AF22F9FF070083CE4B /* AppDelegate.swift in Sources */,
+				04A5DCE022FABB600055D4CE /* LocalDb.swift in Sources */,
 				04A5DCD122FA39190055D4CE /* ApiService.swift in Sources */,
 				04A5DCBB22FA0A2A0055D4CE /* CustomTextField.swift in Sources */,
 				04A5DCC522FA1FC50055D4CE /* NSMutableAttributedString.swift in Sources */,

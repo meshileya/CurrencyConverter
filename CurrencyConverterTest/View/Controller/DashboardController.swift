@@ -8,18 +8,25 @@
 
 import Foundation
 import UIKit
+import Realm
 
 class DashboardController : UIViewController, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout, GetChartData, SelectedFromDelegate, UITextFieldDelegate{
+    var dateData: [String] = []
+    
+    var currencyRate: [Double] = []
+    
     
     var fromIsSelected = false
     var selectedCountry : RatesModel?
     var delegate : SelectedFromDelegate?
     
-    var dateData = [String]()
-    
-    var currencyRate = [Double]()
+//    var dateData = [String]()
+//    
+//    var currencyRate = [Double]()
     
     var items: [RatesModel] = []
+    let lineChart = LineChart(frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 300))
+    
     //Load this particular view into the memory
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +39,7 @@ class DashboardController : UIViewController, UIScrollViewDelegate, UICollection
         super.viewWillAppear(animated)
         initViews()
         initData()
+        
     }
     
     
@@ -131,10 +139,10 @@ class DashboardController : UIViewController, UIScrollViewDelegate, UICollection
         stackView.addArrangedSubview(convertButton)
         stackView.addArrangedSubview(exchangeRateUpdateLabel)
         
-        let lineChart = LineChart(frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 300))
+//        let lineChart = LineChart(frame: CGRect(x: 0.0, y: 0.0, width: 300, height: 300))
         stackView.addArrangedSubview(lineChart)
         lineChart.layer.cornerRadius = 10
-        lineChart.delegate = self
+//        lineChart.delegate = self
         
         lineChart.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         lineChart.heightAnchor.constraint(equalToConstant: 300).isActive = true
@@ -155,7 +163,7 @@ class DashboardController : UIViewController, UIScrollViewDelegate, UICollection
         stackView.spacing = 20
         stackView.axis = .horizontal
         stackView.alignment = .fill
-        stackView.distribution = .fill
+        stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addArrangedSubview(fromCountryCurrencyLabel)
         stackView.addArrangedSubview(arrowImage)

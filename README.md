@@ -22,3 +22,4 @@ How to install.
 5. Amaze your experience with what you will see next.
 
 <img src="https://github.com/meshileya/CurrencyConverter/blob/dev/sample.gif"/>
+<img src="https://github.com/meshileya/CurrencyConverter/blob/dev/image.png"/>

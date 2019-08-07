@@ -8,9 +8,10 @@
 
 import Foundation
 import UIKit
-//import Charts
+import TTGSnackbar
+
 extension DashboardController{
-    
+    //The protocol for the chart
     func getChartData(with dataPoints: [String], values: [Double]) {
         self.dateData = dataPoints
         self.currencyRate = values
@@ -104,19 +105,32 @@ extension DashboardController{
                 self.items = data
                 self.collectionView.reloadData()
                 self.populateChartData()
+            }else{
+                let snackbar = TTGSnackbar(message: error?.localizedDescription ?? "An unknown error has occured, please try again.", duration: .long)
+                snackbar.show()
             }
             
         }
     }
-    
+    //Since there is no data for history, had to just make use of the currency value for each country to populate the data.
     func populateChartData(){
         if items.count > 0 {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            for item in items {
-                currencyRate.append(item.countryRate)
-                dateData.append("DAte")
+            //to get the date format i want.
+            //The different format we have can be gotten from https://nsdateformatter.com/
+            dateFormatter.dateFormat = "MMM d, yyyy"
+            for item in LocalDb().getLocalData() {
+                currencyRate.append(item.currencyValue)
+                dateData.append(dateFormatter.string(from: item.dateObject))
             }
         }
+        if items.count > 2{
+            fromCountryCurrencyLabel.text = "  ".flag(country: items[0].countryCode) + items[0].countryCode+"    ▼"
+            toCountryCurrencyLabel.text = "  ".flag(country: items[1].countryCode) + items[1].countryCode+"    ▼"
+        }
+        
+        lineChart.delegate = self
+        
+        
     }
 }
