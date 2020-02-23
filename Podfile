@@ -8,6 +8,7 @@ target 'CurrencyConverterTest' do
   # Pods for CurrencyConverterTest
 source 'https://github.com/CocoaPods/Specs.git'
 pod 'RealmSwift'
+pod 'RealmSwift', '~> 3.19.0'
 pod 'Alamofire', '~> 4.7.3'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'SnapKit', '~> 4.0.0'

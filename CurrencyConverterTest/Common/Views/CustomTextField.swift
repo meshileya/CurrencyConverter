@@ -11,15 +11,6 @@ import SkyFloatingLabelTextField
 
 class CustomTextField: SkyFloatingLabelTextField {
     private let leftPadding = CGFloat(16)
-//    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-//        let rect = CGRect(
-//            x: leftPadding,
-//            y: titleHeight(),
-//            width: bounds.size.width,
-//            height: bounds.size.height - titleHeight() - selectedLineHeight
-//        )
-//        return rect
-//    }
     override func titleLabelRectForBounds(_ bounds: CGRect, editing: Bool) -> CGRect {
         if editing {
             return CGRect(x: leftPadding, y: 0, width: bounds.size.width, height: titleHeight())
